@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package FishApi;
+
+option go_package = "bitbucket.org/emsbv/protos/fishapi";
+
+service FishProxy {
+    rpc FishCheck(CheckRequest) returns (CheckResponse) {}
+}
+
+
+message CheckRequest {
+    int64 Schadegeval = 1;
+    string Email = 2;
+    string Achternaam = 3;
+	string Voorletters = 4;
+	string Birthdate = 5;
+	string Gender = 6;
+	string Postcode = 7;
+	int64 HouseNumber = 8;
+	string EventDate = 9;
+	string Parameter = 10;
+}
+
+message CheckResponse {
+    int64 CountMatches = 1;
+    Matches RuleMatches = 2;
+    string Evaluation = 3;
+    string EvaluationID = 4;
+    int64 Schadegeval = 5;
+    LogItems LogItems = 6;
+}
+
+
+message Matches {
+    repeated Match Match = 1;
+}
+
+message Match {
+    string MatchCode = 1;
+    string MatchDesc = 2;
+}
+
+
+message LogItems {
+    repeated LogItem Item = 1;
+}
+
+message LogItem {
+    string Code = 1;
+    string Description = 2;
+}
