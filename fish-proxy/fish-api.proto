@@ -24,7 +24,7 @@ message CheckRequest {
 
 message CheckResponse {
     int64 CountMatches = 1;
-    Matches RuleMatches = 2;
+    FishMatches RuleMatches = 2;
     string Evaluation = 3;
     string EvaluationID = 4;
     int64 Schadegeval = 5;
@@ -32,11 +32,11 @@ message CheckResponse {
 }
 
 
-message Matches {
-    repeated Match Match = 1;
+message FishMatches {
+    repeated FishMatch Match = 1;
 }
 
-message Match {
+message FishMatch {
     string MatchCode = 1;
     string MatchDesc = 2;
 }

@@ -48,4 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
-build/*
+build/go/*
+build/php/*
+!build/**/.gitkeep
