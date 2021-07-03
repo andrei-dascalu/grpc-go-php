@@ -1,10 +1,11 @@
-# EMS Protocol Buffers #
+# GRPC Workshop #
 
-Collection of protobuf definitions for EMS services
+GRPC with Go server and PHP client
 
 
 ## PHP ##
 
+* `grpcext.sh` - will install `grpc_php_plugin` via bazel (MacOS)
 * deps: `pecl install grpc`
 * deps: `composer require grpc/grpc`
 
@@ -20,7 +21,6 @@ protoc \
 ```
 
 
-
 ## Golang ##
 * deps `go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest`
 * Go: `protoc --proto_path=fish-proxy --go_out=build fish-proxy/fish-api.proto`
@@ -34,7 +34,6 @@ protoc \
   --go-grpc_opt=paths=source_relative \
     ./fish-proxy/fish-api.proto
 ```
-
 
 ## Requirements ##
 
