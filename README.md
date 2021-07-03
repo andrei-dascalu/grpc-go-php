@@ -5,7 +5,7 @@ GRPC with Go server and PHP client
 
 ## PHP ##
 
-* `grpcext.sh` - will install `grpc_php_plugin` via bazel (MacOS)
+* `ext_install_cmake.sh` - will install `grpc_php_plugin` via cmake (may need `ext_prepare_instal.sh` to prepare tools)
 * deps: `pecl install grpc`
 * deps: `composer require grpc/grpc`
 
